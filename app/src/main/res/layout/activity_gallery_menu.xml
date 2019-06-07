@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".Activities.GalleryMenuActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/black_overlay"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textViewColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Background Colors"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="64pt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.skydoves.colorpickerpreference.ColorPickerView
+                        android:id="@+id/colorPickerViewFirst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:layout_weight="0.5"
+                        app:palette="@drawable/palette"
+                        app:selector="@drawable/wheel">
+
+                    </com.skydoves.colorpickerpreference.ColorPickerView>
+
+                    <com.skydoves.colorpickerpreference.ColorPickerView
+                        android:id="@+id/colorPickerViewSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:layout_weight="0.5"
+                        app:palette="@drawable/palette"
+                        app:selector="@drawable/wheel">
+
+                    </com.skydoves.colorpickerpreference.ColorPickerView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Time Per Photo"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="64pt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewTimePerPhoto"
+                        android:layout_width="164dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center_horizontal"
+                        android:text="10"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="48pt" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarTimePerPhoto"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="100"
+                        android:max="55"
+                        android:progress="10" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/black_overlay"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Transition"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="64pt" />
+
+                <RadioGroup
+                    android:id="@+id/radGroupType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cut"
+                        android:textSize="32pt"
+                        tools:textColor="@android:color/background_light" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonFade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fade"
+                        android:textSize="32pt"
+                        tools:textColor="@android:color/background_light" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSlide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Slide"
+                        android:textSize="32pt"
+                        tools:textColor="@android:color/background_light" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="Transition Speed"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="64pt" />
+
+                <RadioGroup
+                    android:id="@+id/radGroupSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonVSlow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Very Slow (3 sec)"
+                        android:textSize="32pt"
+                        tools:textColor="@android:color/background_light" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSlow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Slow (2 sec)"
+                        android:textSize="32pt"
+                        tools:textColor="@android:color/background_light" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Medium (1.5 sec)"
+                        android:textSize="32pt"
+                        tools:textColor="@android:color/background_light" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonFast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fast (1 sec)"
+                        android:textSize="32pt"
+                        tools:textColor="@android:color/background_light" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonVFast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Very Fast (0.5 sec)"
+                        android:textSize="32pt"
+                        tools:textColor="@android:color/background_light" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageButtonBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black_overlay"
+                android:padding="10dp"
+                app:srcCompat="@drawable/back" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
